@@ -1,4 +1,5 @@
 const closebutton = document.getElementById("closebutton");
+const profilebutton = document.getElementById("ProfileButton");
 const container1 = document.getElementById("container1");
 const box1 = document.getElementById("box1");
 const box2 = document.getElementById("box2");
@@ -9,7 +10,7 @@ let state = false;
 closebutton.addEventListener("click", function() {
     if (state === false) {
         container1.style.transition = "left 0.3s ease";
-        container1.style.left = "-125px";
+        container1.style.left = "-210px";
         box1.style.transition = "left 0.3s ease";
         box1.style.left = "-125px";
         box2.style.transition = "left 0.3s ease";
@@ -20,6 +21,8 @@ closebutton.addEventListener("click", function() {
         box4.style.left = "-210px";
         box5.style.transition = "left 0.3s ease";
         box5.style.left = "-210px";
+        searchBox.style.transition = "transform 0.3s ease";
+        searchBox.style.transform = "translateX(-64px) scaleX(1.1375)";
         state = true;
         return;
     }
@@ -36,6 +39,15 @@ closebutton.addEventListener("click", function() {
         box4.style.left = "0px";
         box5.style.transition = "left 0.3s ease";
         box5.style.left = "0px";
+        searchBox.style.transition = "transform 0.3s ease";
+        searchBox.style.transform = "translateX(0px) scaleX(1)";
         state = false;
     }
 });
+profilebutton.addEventListener("click", function() {
+    if (state === false) {
+        state = true;
+    } else if (state === true) {     
+        state = false;
+    }
+})
