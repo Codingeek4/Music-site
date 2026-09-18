@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "file:///C:/Users/zact8/Downloads/Music%20site/index.html",
+            "url": "file:///C:/Users/zact8/Downloads/Music-site/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

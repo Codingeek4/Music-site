@@ -6,48 +6,55 @@ const box2 = document.getElementById("box2");
 const box3 = document.getElementById("box3");
 const box4 = document.getElementById("box4");
 const box5 = document.getElementById("box5");
-let state = false;
+const profile = document.getElementById("profile");
+const searchBox = document.getElementById("searchBox");
+let State = false;
+let profileState = false;
 closebutton.addEventListener("click", function() {
-    if (state === false) {
+    if (State === false) {
         container1.style.transition = "left 0.3s ease";
-        container1.style.left = "-210px";
+        container1.style.left = "-15%";
         box1.style.transition = "left 0.3s ease";
-        box1.style.left = "-125px";
+        box1.style.left = "-10.25%";
         box2.style.transition = "left 0.3s ease";
-        box2.style.left = "-210px";
+        box2.style.left = "-15%";
         box3.style.transition = "left 0.3s ease";
-        box3.style.left = "-210px";
+        box3.style.left = "-15%";
         box4.style.transition = "left 0.3s ease";
-        box4.style.left = "-210px";
+        box4.style.left = "-15%";
         box5.style.transition = "left 0.3s ease";
-        box5.style.left = "-210px";
+        box5.style.left = "-15%";
         searchBox.style.transition = "transform 0.3s ease";
-        searchBox.style.transform = "translateX(-64px) scaleX(1.1375)";
-        state = true;
+        searchBox.style.transform = "translateX(-7.55%) scaleX(1.15)";
+        State = true;
         return;
     }
-    if (state === true) {
+    if (State === true) {
         container1.style.transition = "left 0.3s ease";
-        container1.style.left = "0px";
+        container1.style.left = "0%";
         box1.style.transition = "left 0.3s ease";
-        box1.style.left = "0px";
+        box1.style.left = "0%";
         box2.style.transition = "left 0.3s ease";
-        box2.style.left = "0px";
+        box2.style.left = "0%";
         box3.style.transition = "left 0.3s ease";
-        box3.style.left = "0px";
+        box3.style.left = "0%";
         box4.style.transition = "left 0.3s ease";
-        box4.style.left = "0px";
+        box4.style.left = "0%";
         box5.style.transition = "left 0.3s ease";
-        box5.style.left = "0px";
+        box5.style.left = "0%";
         searchBox.style.transition = "transform 0.3s ease";
-        searchBox.style.transform = "translateX(0px) scaleX(1)";
-        state = false;
+        searchBox.style.transform = "translateX(0%) scaleX(1)";
+        State = false;
     }
 });
 profilebutton.addEventListener("click", function() {
-    if (state === false) {
-        state = true;
-    } else if (state === true) {     
-        state = false;
+    if (profileState === false) {
+        profileState = true;
+        profile.style.transition = "right 0.3s ease";
+        profile.style.right = "0.7%";
+    } else if (profileState === true) {     
+        profileState = false;
+        profile.style.transition = "right 0.3s ease";
+        profile.style.right = "-4.5%";
     }
 })
